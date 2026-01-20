@@ -1,0 +1,17 @@
+# pip install pymem
+
+import pymem # type: ignore
+
+pm = pymem.Pymem("popcapgame1.exe")
+
+addres = "0x00000000" #replace 00000000 with you address in cheat engine
+
+suns = pm.read_int(addres)
+
+print("Currennt suns:", suns)
+
+user_input = int(input("How many suns do you wish to have?"))
+
+pm.write_int(addres,user_input)
+
+print("Successfully hacked suns!")
